@@ -2,7 +2,7 @@
 
 ## BLOCKCHAIN CONFIGURATION
 
-- [ ] Go to blockchain folder cd blockchain
+- [ ] Go to blockchain folder `cd blockchain`
 - [ ] Run 
 ```bash
 docker run --rm -it -v ${PWD}/data:/data ethereum/client-go:latest account new --datadir /data
