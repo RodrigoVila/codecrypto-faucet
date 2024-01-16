@@ -26,17 +26,17 @@ You can add an extra wallet to receive funds when you initialize the Blockchain.
 ![image](https://github.com/RodrigoVila/codecrypto-faucet/assets/42290738/04d2f11e-f970-4daa-82ff-577dc8698a4b)
 
 ## BLOCKCHAIN INTIALIZATION
--[ ] Run 
+- [ ] Run 
 ```bash
 docker run --rm -it -v ${PWD}/genesis.json:/genesis.json -v ${PWD}/data:/data ethereum/client-go:latest init --datadir /data /genesis.json
 ```
 
 ## LAUNCH DB
--[ ] Replace "--miner.etherbase" and "--unlock" addresses in the next command for the same address you used at the genesis.json at the previous step.
+- [ ] Replace "--miner.etherbase" and "--unlock" addresses in the next command for the same address you used at the genesis.json at the previous step.
 
 **IMPORTANT NOTE: I'm using windows 11 with WSL and I needed to add the flag --ipcdisable. If you are runing a unix system, probably you don't need this flag**
 
--[ ] Run
+- [ ] Run
 
 ```bash
 docker run --rm -it -p 9999:8545 -v ${PWD}/data:/data ethereum/client-go:latest \
