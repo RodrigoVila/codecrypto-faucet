@@ -12,8 +12,7 @@ function App() {
   const getUrl = (type: "faucet" | "balance") => {
     /* If using WSL on Windows, get nameserver doing
     cat /etc/resolv.conf
-    at your wsl console and replace "localhost"
-    on the next line */
+    at your wsl console and replace the IP on the next line */
     return `http://192.168.176.1:5000/${type}/${currentAccount}`;
   };
 
@@ -56,8 +55,8 @@ function App() {
       setLoading(true);
 
       const res = await fetch(url);
-      const { transactionHash } = await res.json();
-      setTx(transactionHash);
+      const { receipt } = await res.json();
+      setTx(receipt.transactionHash);
     } catch (e) {
       console.error("Error getting ETH: ", e);
     } finally {
@@ -78,12 +77,12 @@ function App() {
   }, [currentAccount]);
 
   return (
-    <div>
+    <div className="container">
       <h3>{`Current account: ${currentAccount}`}</h3>
-      <button onClick={onButtonClick} disabled={isLoading}>
+      <button className="button" onClick={onButtonClick} disabled={isLoading}>
         {isLoading ? "Loading..." : "Send 0.1 ETH"}
       </button>
-      {tx ? <div>{`Success! Tx Hash: ${tx}`}</div> : null}
+      {tx ? <div className="success-msg">{`Success! Tx Hash: ${tx}`}</div> : null}
       <h4>{`Balance: ${balance} ETH`}</h4>
     </div>
   );
