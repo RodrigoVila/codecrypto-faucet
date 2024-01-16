@@ -10,9 +10,11 @@ function App() {
   const wallet = window.ethereum;
 
   const getUrl = (type: "faucet" | "balance") => {
-    /* If using WSL on Windows, get nameserver doing
-    cat /etc/resolv.conf
-    at your wsl console and replace the IP on the next line */
+    /*  If using WSL on Windows, get nameserver doing
+        cat /etc/resolv.conf
+        at your wsl console and replace the IP on the next line.
+        Otherwise just use http://localhost:5000/...
+     */
     return `http://192.168.176.1:5000/${type}/${currentAccount}`;
   };
 
@@ -78,12 +80,16 @@ function App() {
 
   return (
     <div className="container">
-      <h3>{`Current account: ${currentAccount}`}</h3>
-      <button className="button" onClick={onButtonClick} disabled={isLoading}>
+      {currentAccount && <h3>{`Current account: ${currentAccount}`}</h3>}
+      <button
+        className="button"
+        onClick={onButtonClick}
+        disabled={isLoading}
+      >
         {isLoading ? "Loading..." : "Send 0.1 ETH"}
       </button>
-      {tx ? <div className="success-msg">{`Success! Tx Hash: ${tx}`}</div> : null}
-      <h4>{`Balance: ${balance} ETH`}</h4>
+      {tx && <div className="success-msg">{`Success! Tx Hash: ${tx}`}</div>}
+      {balance && <h4>{`Balance: ${balance} ETH`}</h4>}
     </div>
   );
 }
