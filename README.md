@@ -33,7 +33,7 @@ docker run --rm -it -v ${PWD}/data:/data ethereum/client-go:latest account new -
 
 - Replace the address inside blockchain/genesis.json:
 - [ ] At "alloc" object
-- [ ] At the "extradata" string. NOTE: There should be 64 "0" before the the address (image starts with 0xA) and 130 after (image ends with 914).
+- [ ] At the "extradata" string. NOTE: There should be 64 "0" before the the address (below image address starts with ebc) and 130 after (address ends with 3d3).
 
 ![image](https://github.com/RodrigoVila/codecrypto-faucet/assets/42290738/650dacf5-707c-4b2c-86c6-f01cd438d29d)
 
