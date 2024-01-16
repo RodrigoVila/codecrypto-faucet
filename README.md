@@ -5,6 +5,9 @@ This is a [CodeCrypto](https://codecrypto.academy/) project that allow us to set
 ## ARQUITECTURE
 *NOTE: Ports may have changed from the image below*
 
+![image](https://github.com/RodrigoVila/codecrypto-faucet/assets/42290738/c2ba0685-5413-4e8a-b9b8-1130e06ee444)
+
+
 ## TECH USED
 - [Docker](https://www.docker.com/)
 - [Node.JS](https://nodejs.org/en)
@@ -66,22 +69,33 @@ docker run --rm -it -p 9999:8545 -v ${PWD}/data:/data ethereum/client-go:latest 
     --ipcdisable \
     --http.api "admin,eth,debug,miner,net,txpool,personal,web3"
 ```
+## ADD BLOCKCHAIN TO YOUR METAMASK
+- [ ] Login on your Metamask account
+- [ ] Click on the current network > Add new network > Add a network manually
+- [ ] Add the data below and save
+
+![image](https://github.com/RodrigoVila/codecrypto-faucet/assets/42290738/86640b25-a026-418b-98aa-1154898271d0)
 
 ## LAUNCH BACKEND
--[ ] Go to backend folder and open the .env file
--[ ] Add the passwd you created at `BLOCKCHAIN CONFIGURATION` section
--[ ] Open a new console
--[ ] Go to backend folder `cd backend`
--[ ] Run `npx nodemon app.js`. Install nodemon if necessary
+- [ ] Go to backend folder and open the .env file
+- [ ] Add the passwd you created at [BLOCKCHAIN CONFIGURATION](https://github.com/RodrigoVila/codecrypto-faucet?tab=readme-ov-file#blockchain-configuration) section
+
+- [ ] Add the path to your keysytore file into the KEYSTORE_FILE_PATH variable at app.js
+![image](https://github.com/RodrigoVila/codecrypto-faucet/assets/42290738/0c23c7d1-704c-4bff-b1f7-0d9b57eb18fb)
+
+- [ ] Open a new console
+- [ ] Go to backend folder `cd backend`
+- [ ] Install dependencies. Run `npm i`
+- [ ] Run `npx nodemon app.js`. Install nodemon if necessary
 
 ## LAUNCH FRONTEND
--[ ] Open a new console
--[ ] Go to frontend folder `cd frontend`
--[ ] Install dependencies. Run `npm i`
--[ ] Run `npm run dev`
+- [ ] Open a new console
+- [ ] Go to frontend folder `cd frontend`
+- [ ] Install dependencies. Run `npm i`
+- [ ] Run `npm run dev`
 
 ## HOW TO USE?
--[ ] Visit website at `http://localhost:5173/`
--[ ] [Connect your Metamask account](https://docs.metamask.io/wallet/how-to/connect/)
--[ ] Click on the button to get some fake coins.
+- [ ] Visit website at `http://localhost:5173/`
+- [ ] [Connect your Metamask account](https://docs.metamask.io/wallet/how-to/connect/)
+- [ ] Click on the button to get some fake coins.
 
