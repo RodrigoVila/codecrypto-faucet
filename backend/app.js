@@ -30,7 +30,12 @@ app.get('/faucet/:address', async (req, res) => {
         }
 
         const { rawTransaction } = await senderAccount.signTransaction(tx)
-        const receipt = await web3.eth.sendSignedTransaction(rawTransaction)
+        const rawReceipt = await web3.eth.sendSignedTransaction(rawTransaction)
+        const strReceipt = JSON.stringify(rawReceipt, (key, value) =>
+            typeof value === 'bigint' ? value.toString() : value
+        );
+        const receipt = JSON.parse(strReceipt)
+
         res.json({ receipt })
     } catch (e) {
         console.error("Failed to process tx. Error: ", e)
