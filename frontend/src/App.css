@@ -6,7 +6,8 @@
 }
 
 .button {
-background-color: lightskyblue;
+  background-color: lightskyblue;
+  align-self: center;
 }
 
 .button:hover {
@@ -21,7 +22,7 @@ background-color: lightskyblue;
 .container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .success-msg {
