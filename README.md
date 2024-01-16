@@ -12,18 +12,18 @@ docker run --rm -it -v ${PWD}/data:/data ethereum/client-go:latest account new -
 
 - [ ] Copy the address from blockchain/data/keystore/UTC--XXXX" at the key "address".
 
-![Alt text](image-1.png)
+![image](https://github.com/RodrigoVila/codecrypto-faucet/assets/42290738/ae7937db-98ba-4701-8ebe-d9491e113b6c)
 
 - Replace the address inside blockchain/genesis.json:
 - [ ] At "alloc" object
 - [ ] At the "extradata" string. NOTE: There should be 64 "0" before the the address (image starts with 0xA) and 130 after (image ends with 914).
 
-![Alt text](image-3.png)
+![image](https://github.com/RodrigoVila/codecrypto-faucet/assets/42290738/650dacf5-707c-4b2c-86c6-f01cd438d29d)
 
 ### ADDING EXTRA WALLET
 You can add an extra wallet to receive funds when you initialize the Blockchain. To do so, copy the public address from your wallet and add it to the alloc object
 
-![Alt text](image-2.png)
+![image](https://github.com/RodrigoVila/codecrypto-faucet/assets/42290738/04d2f11e-f970-4daa-82ff-577dc8698a4b)
 
 ## BLOCKCHAIN INTIALIZATION
 -[ ] Run 
