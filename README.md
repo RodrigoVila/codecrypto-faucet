@@ -1,5 +1,19 @@
 # FAUCET PROJECT
 
+This is a [CodeCrypto](https://codecrypto.academy/) project that allow us to set up and run a blockchain node, a backend and a frontend in order to get fake ethers to a specified account and also to read it's balance
+
+## ARQUITECTURE
+*NOTE: Ports may have changed from the image below*
+
+## TECH USED
+- [Docker](https://www.docker.com/)
+- [Node.JS](https://nodejs.org/en)
+- [Express JS](https://expressjs.com/)
+- [Web3 Library](https://web3js.readthedocs.io/en/v1.10.0/)
+- [Vite](https://vitejs.dev/)
+- [React](https://react.dev/)
+- [Typescript](https://www.typescriptlang.org/)
+
 ## BLOCKCHAIN CONFIGURATION
 
 - [ ] Go to blockchain folder `cd blockchain`
