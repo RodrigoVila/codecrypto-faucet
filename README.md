@@ -52,3 +52,22 @@ docker run --rm -it -p 9999:8545 -v ${PWD}/data:/data ethereum/client-go:latest 
     --ipcdisable \
     --http.api "admin,eth,debug,miner,net,txpool,personal,web3"
 ```
+
+## LAUNCH BACKEND
+-[ ] Go to backend folder and open the .env file
+-[ ] Add the passwd you created at `BLOCKCHAIN CONFIGURATION` section
+-[ ] Open a new console
+-[ ] Go to backend folder `cd backend`
+-[ ] Run `npx nodemon app.js`. Install nodemon if necessary
+
+## LAUNCH FRONTEND
+-[ ] Open a new console
+-[ ] Go to frontend folder `cd frontend`
+-[ ] Install dependencies. Run `npm i`
+-[ ] Run `npm run dev`
+
+## HOW TO USE?
+-[ ] Visit website at `http://localhost:5173/`
+-[ ] [Connect your Metamask account](https://docs.metamask.io/wallet/how-to/connect/)
+-[ ] Click on the button to get some fake coins.
+
